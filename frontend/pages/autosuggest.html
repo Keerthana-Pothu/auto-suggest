@@ -1,103 +1,39 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Auto Suggest</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .left-bar{
+            position: fixed;
+            top: 20px;
+            left: 20px;
+        }
+        .right-bar{
+            position: fixed;
+            top: 20px;
+            right: 20px;
+        }
+        .search-section{
+            text-align: center;
+            margin-top: 100px;
+        }
+    </style>
 </head>
 <body>
-
     <div>
-
-        <p>
-            &#9881; &bull; online |
-            &#128339; - ms
-        </p>
-
-        <h1>BeingInfinity</h1>
-
-        <p>
-            One million phrases. Four algorithms.
-            Prefix Based Auto Suggest.
-        </p>
-
-        <div>
-            <span>&#128269;</span>
-
-            <input
-                type="text"
-                id="search"
-                placeholder="Start typing to search phrases..."
-                onkeyup="suggest()"
-                autocomplete="off"
-            >
-        </div>
-
-        <div id="suggestions"></div>
-
+        <span class="left-bar">&#9881;</span>
+        <span class="right-bar">&#x2022; online | &#x1F552 - ms</span>
     </div>
+        
+    <div class="search-section">
+        <h1> BeingInfinity </h1>
 
-   
+        <p> One million phrases. Four Algorithms. Prefix Based Auto Suggest. </p>
 
-    <script>
-        const phrases = [
-            "apple",
-            "application",
-            "apply",
-            "array",
-            "algorithm",
-            "banana",
-            "ball",
-            "bat",
-            "binary search",
-            "car",
-            "cat",
-            "coding",
-            "computer",
-            "data",
-            "elephant",
-            "fish",
-            "grape",
-            "hat",
-            "ice cream",
-            "jungle",
-            "kangaroo",
-            "lemon",
-            "monkey",
-            "notebook",
-            "orange",
-            "penguin",
-            "quilt",
-            "rabbit",
-            "strawberry",
-            "tiger",
-            "umbrella",
-            "violin",
-            "watermelon",
-            "xylophone",
-            "yogurt",
-            "zebra"
-
-
-
-
-        ];
-
-        function suggest() {
-            let text = document.getElementById("search").value.toLowerCase();
-            let box = document.getElementById("suggestions");
-
-            box.innerHTML = "";
-
-            if (text === "") return;
-
-            for (let i = 0; i < phrases.length; i++) {
-                if (phrases[i].startsWith(text)) {
-                    let div = document.createElement("div");
-                    div.innerHTML = phrases[i];
-                    box.appendChild(div);
-                }
-            }
-        }
-    </script>
+        <span>&#128269;<input type="text" id="search" placeholder="Start typing to search phrases..."></span>
+    </div>
 
 </body>
 </html>
