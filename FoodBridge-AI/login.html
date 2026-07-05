@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FoodBridge AI | Login</title>
+
+<link rel="stylesheet" href="css/style.css">
+
+<style>
+
+body{
+display:flex;
+justify-content:center;
+align-items:center;
+height:100vh;
+background:#f0fff4;
+}
+
+.login-container{
+width:380px;
+background:white;
+padding:40px;
+border-radius:15px;
+box-shadow:0 10px 25px rgba(0,0,0,.1);
+text-align:center;
+}
+
+.login-container h1{
+color:#16a34a;
+margin-bottom:25px;
+}
+
+input{
+width:100%;
+padding:14px;
+margin:12px 0;
+border:1px solid #ccc;
+border-radius:10px;
+font-size:16px;
+}
+
+button{
+width:100%;
+padding:15px;
+border:none;
+background:#16a34a;
+color:white;
+font-size:18px;
+border-radius:10px;
+cursor:pointer;
+transition:.3s;
+}
+
+button:hover{
+background:#15803d;
+}
+
+a{
+color:#16a34a;
+text-decoration:none;
+font-weight:bold;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="login-container">
+
+<h1>FoodBridge AI</h1>
+
+<input
+type="email"
+id="email"
+placeholder="Enter Email">
+
+<input
+type="password"
+id="password"
+placeholder="Enter Password">
+
+<button onclick="login()">
+Login
+</button>
+
+<p style="margin-top:20px;">
+Don't have an account?
+
+<a href="signup.html">
+Sign Up
+</a>
+
+</p>
+
+</div>
+
+<script src="js/auth.js"></script>
+
+</body>
+</html>
